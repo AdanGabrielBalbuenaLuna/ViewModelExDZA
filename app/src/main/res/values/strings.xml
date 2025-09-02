@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ViewModelExStevDZA</string>
+    <string name="button_add">ADD+1</string>
+    <string name="tv_counter">Zero</string>
 </resources>
