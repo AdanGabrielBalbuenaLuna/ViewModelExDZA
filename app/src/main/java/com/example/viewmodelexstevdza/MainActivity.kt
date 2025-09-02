@@ -16,13 +16,11 @@ class MainActivity : AppCompatActivity() {
         var button = findViewById<Button>(R.id.button)
         var textView: TextView = findViewById(R.id.counter)
 
-        var viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-
-        //textView.text = viewModel.number.toString()
+        var viewModelFactory = MainViewModelFactory("Gabriel")
+        var viewModel = ViewModelProvider(this, viewModelFactory).get(MainActivityViewModel::class.java)
 
         button.setOnClickListener {
-            viewModel.addNumber()
-            textView.text = viewModel.number.toString()
+            textView.text = viewModel.myName
         }
     }
 }
