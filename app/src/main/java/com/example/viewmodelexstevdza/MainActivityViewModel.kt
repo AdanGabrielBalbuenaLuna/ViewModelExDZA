@@ -1,11 +1,12 @@
 package com.example.viewmodelexstevdza
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
-class MainActivityViewModel: ViewModel() {
+class MainActivityViewModel(name: String): ViewModel() {
 
-    var number = 0
-    fun addNumber(){
-        number++
+    var myName = name
+    init {
+        Log.d("Gabo", "My name is $name")
     }
 }
